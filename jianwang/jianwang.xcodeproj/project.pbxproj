@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B562719DA9792532B265DCF0 /* libPods-jianwang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */; };
 		DED6204B1DAA326B00B2FFD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204A1DAA326B00B2FFD2 /* main.m */; };
 		DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */; };
 		DED620511DAA326B00B2FFD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED620501DAA326B00B2FFD2 /* ViewController.m */; };
@@ -36,20 +37,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.debug.xcconfig"; sourceTree = "<group>"; };
+		4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jianwang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD40DCA1DAB6B3B0001680D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		86719F7B1C561DC7C9229BEF /* Pods-jianwang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.release.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.release.xcconfig"; sourceTree = "<group>"; };
 		DED620461DAA326B00B2FFD2 /* jianwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jianwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED6204A1DAA326B00B2FFD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DED6204F1DAA326B00B2FFD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DED620501DAA326B00B2FFD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DED6204F1DAA326B00B2FFD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = jianwang/ViewController.h; sourceTree = "<group>"; };
+		DED620501DAA326B00B2FFD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = jianwang/ViewController.m; sourceTree = "<group>"; };
 		DED620531DAA326B00B2FFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DED620561DAA326B00B2FFD2 /* jianwang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = jianwang.xcdatamodel; sourceTree = "<group>"; };
-		DED620581DAA326B00B2FFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DED620581DAA326B00B2FFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = jianwang/Assets.xcassets; sourceTree = "<group>"; };
 		DED6205B1DAA326B00B2FFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DED6205D1DAA326B00B2FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DED620621DAA326B00B2FFD2 /* jianwangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jianwangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED620661DAA326B00B2FFD2 /* jianwangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jianwangTests.m; sourceTree = "<group>"; };
-		DED620681DAA326C00B2FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED620681DAA326C00B2FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = jianwangTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		DED6206D1DAA326C00B2FFD2 /* jianwangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jianwangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED620711DAA326C00B2FFD2 /* jianwangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jianwangUITests.m; sourceTree = "<group>"; };
 		DED620731DAA326C00B2FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B562719DA9792532B265DCF0 /* libPods-jianwang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,13 +86,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CD40DC71DAB6A8E0001680D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DED6204F1DAA326B00B2FFD2 /* ViewController.h */,
+				DED620501DAA326B00B2FFD2 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7CD40DC81DAB6A930001680D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DED620551DAA326B00B2FFD2 /* jianwang.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7CD40DC91DAB6A970001680D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DED6205A1DAA326B00B2FFD2 /* LaunchScreen.storyboard */,
+				DED620521DAA326B00B2FFD2 /* Main.storyboard */,
+				DED620581DAA326B00B2FFD2 /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7CD40DCB1DAB6B960001680D /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 3rd;
+			sourceTree = "<group>";
+		};
+		9569F153DF25C25D132E0D82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5C1221D741AE26DED34C34F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */,
+				86719F7B1C561DC7C9229BEF /* Pods-jianwang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DED6203D1DAA326B00B2FFD2 = {
 			isa = PBXGroup;
 			children = (
+				7CD40DCB1DAB6B960001680D /* 3rd */,
+				7CD40DC91DAB6A970001680D /* View */,
+				7CD40DC81DAB6A930001680D /* Model */,
+				7CD40DC71DAB6A8E0001680D /* Controller */,
 				DED620481DAA326B00B2FFD2 /* jianwang */,
 				DED620651DAA326B00B2FFD2 /* jianwangTests */,
 				DED620701DAA326C00B2FFD2 /* jianwangUITests */,
 				DED620471DAA326B00B2FFD2 /* Products */,
+				B5C1221D741AE26DED34C34F /* Pods */,
+				9569F153DF25C25D132E0D82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +166,7 @@
 		DED620481DAA326B00B2FFD2 /* jianwang */ = {
 			isa = PBXGroup;
 			children = (
-				DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */,
-				DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */,
-				DED6204F1DAA326B00B2FFD2 /* ViewController.h */,
-				DED620501DAA326B00B2FFD2 /* ViewController.m */,
-				DED620521DAA326B00B2FFD2 /* Main.storyboard */,
-				DED620581DAA326B00B2FFD2 /* Assets.xcassets */,
-				DED6205A1DAA326B00B2FFD2 /* LaunchScreen.storyboard */,
 				DED6205D1DAA326B00B2FFD2 /* Info.plist */,
-				DED620551DAA326B00B2FFD2 /* jianwang.xcdatamodeld */,
 				DED620491DAA326B00B2FFD2 /* Supporting Files */,
 			);
 			path = jianwang;
@@ -120,7 +175,11 @@
 		DED620491DAA326B00B2FFD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CD40DCA1DAB6B3B0001680D /* PrefixHeader.pch */,
+				DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */,
+				DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */,
 				DED6204A1DAA326B00B2FFD2 /* main.m */,
+				DED620681DAA326C00B2FFD2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				DED620661DAA326B00B2FFD2 /* jianwangTests.m */,
-				DED620681DAA326C00B2FFD2 /* Info.plist */,
 			);
 			path = jianwangTests;
 			sourceTree = "<group>";
@@ -150,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DED620761DAA326C00B2FFD2 /* Build configuration list for PBXNativeTarget "jianwang" */;
 			buildPhases = (
+				00322D650AC2447A708F8D08 /* [CP] Check Pods Manifest.lock */,
 				DED620421DAA326B00B2FFD2 /* Sources */,
 				DED620431DAA326B00B2FFD2 /* Frameworks */,
 				DED620441DAA326B00B2FFD2 /* Resources */,
+				8916AD86B5427F663EC4AEDA /* [CP] Embed Pods Frameworks */,
+				EA40CC96FCBD88D09CA59F11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +329,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00322D650AC2447A708F8D08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8916AD86B5427F663EC4AEDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-jianwang/Pods-jianwang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA40CC96FCBD88D09CA59F11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-jianwang/Pods-jianwang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DED620421DAA326B00B2FFD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +427,7 @@
 				DED620531DAA326B00B2FFD2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = jianwang;
 			sourceTree = "<group>";
 		};
 		DED6205A1DAA326B00B2FFD2 /* LaunchScreen.storyboard */ = {
@@ -326,6 +436,7 @@
 				DED6205B1DAA326B00B2FFD2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = jianwang;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,8 +524,11 @@
 		};
 		DED620771DAA326C00B2FFD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.jianwang;
@@ -424,8 +538,11 @@
 		};
 		DED620781DAA326C00B2FFD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86719F7B1C561DC7C9229BEF /* Pods-jianwang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.jianwang;
@@ -500,6 +617,7 @@
 				DED620781DAA326C00B2FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED620791DAA326C00B2FFD2 /* Build configuration list for PBXNativeTarget "jianwangTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +626,7 @@
 				DED6207B1DAA326C00B2FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED6207C1DAA326C00B2FFD2 /* Build configuration list for PBXNativeTarget "jianwangUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +635,7 @@
 				DED6207E1DAA326C00B2FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -526,7 +646,8 @@
 				DED620561DAA326B00B2FFD2 /* jianwang.xcdatamodel */,
 			);
 			currentVersion = DED620561DAA326B00B2FFD2 /* jianwang.xcdatamodel */;
-			path = jianwang.xcdatamodeld;
+			name = jianwang.xcdatamodeld;
+			path = jianwang/jianwang.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
