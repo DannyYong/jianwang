@@ -14,7 +14,7 @@
     NSString *server = @"http://club.fisheep.com.cn";
     NSString *url = [NSString stringWithFormat:@"%@%@", server, request];
     NSString *decodedURL = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    [[AppAPIClient sharedClient] GET:decodedURL parameters:parameter success:^(NSURLSessionDataTask *operation, id responseObject) {
+    [[AppAPIClient sharedClient] GET:decodedURL parameters:parameter  progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
         success(responseObject);
     } failure: ^(NSURLSessionDataTask *operation, NSError *error) {
         failure(error);
@@ -25,7 +25,7 @@
     NSString *server = @"http://club.fisheep.com.cn";
     NSString *url = [NSString stringWithFormat:@"%@%@", server, request];
     NSString *decodedURL = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    [[AppAPIClient sharedJSONClient] POST:decodedURL parameters:parameter success:^(NSURLSessionDataTask *operation, id responseObject) {
+    [[AppAPIClient sharedJSONClient] POST:decodedURL parameters:parameter progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
         success(responseObject);
     } failure: ^(NSURLSessionDataTask *operation, NSError *error) {
         failure(error);
