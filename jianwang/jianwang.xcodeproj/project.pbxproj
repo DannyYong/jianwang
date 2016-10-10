@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */; };
+		7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD41DAB72140001680D /* AppAPIClient.m */; };
+		7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD61DAB72140001680D /* NSData+Base64.m */; };
+		7CD40DDF1DAB72140001680D /* NSString+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD81DAB72140001680D /* NSString+Crypt.m */; };
+		7CD40DE01DAB72140001680D /* StorageMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DDA1DAB72140001680D /* StorageMgr.m */; };
+		7CD40DE11DAB72140001680D /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DDC1DAB72140001680D /* Utilities.m */; };
+		7CD40DE61DAB76F00001680D /* RequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DE51DAB76F00001680D /* RequestAPI.m */; };
+		7CD40DE81DAB7BDD0001680D /* Openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD40DE71DAB7BDD0001680D /* Openssl.framework */; };
 		B562719DA9792532B265DCF0 /* libPods-jianwang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */; };
 		DED6204B1DAA326B00B2FFD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204A1DAA326B00B2FFD2 /* main.m */; };
 		DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */; };
@@ -39,7 +47,23 @@
 /* Begin PBXFileReference section */
 		2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.debug.xcconfig"; sourceTree = "<group>"; };
 		4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jianwang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CD40DCA1DAB6B3B0001680D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		7CD40DCC1DAB71380001680D /* Openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Openssl.framework; path = ../../iOS_21/3rd/Openssl.framework; sourceTree = "<group>"; };
+		7CD40DCF1DAB71A80001680D /* BasicEncodingRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEncodingRules.h; path = "SCZ-BasicEncodingRules/BasicEncodingRules.h"; sourceTree = "<group>"; };
+		7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEncodingRules.m; path = "SCZ-BasicEncodingRules/BasicEncodingRules.m"; sourceTree = "<group>"; };
+		7CD40DD31DAB72140001680D /* AppAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAPIClient.h; path = Utility/AppAPIClient.h; sourceTree = "<group>"; };
+		7CD40DD41DAB72140001680D /* AppAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAPIClient.m; path = Utility/AppAPIClient.m; sourceTree = "<group>"; };
+		7CD40DD51DAB72140001680D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Utility/NSData+Base64.h"; sourceTree = "<group>"; };
+		7CD40DD61DAB72140001680D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Utility/NSData+Base64.m"; sourceTree = "<group>"; };
+		7CD40DD71DAB72140001680D /* NSString+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Crypt.h"; path = "Utility/NSString+Crypt.h"; sourceTree = "<group>"; };
+		7CD40DD81DAB72140001680D /* NSString+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Crypt.m"; path = "Utility/NSString+Crypt.m"; sourceTree = "<group>"; };
+		7CD40DD91DAB72140001680D /* StorageMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageMgr.h; path = Utility/StorageMgr.h; sourceTree = "<group>"; };
+		7CD40DDA1DAB72140001680D /* StorageMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StorageMgr.m; path = Utility/StorageMgr.m; sourceTree = "<group>"; };
+		7CD40DDB1DAB72140001680D /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Utility/Utilities.h; sourceTree = "<group>"; };
+		7CD40DDC1DAB72140001680D /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = Utility/Utilities.m; sourceTree = "<group>"; };
+		7CD40DE31DAB75720001680D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7CD40DE41DAB76F00001680D /* RequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestAPI.h; sourceTree = "<group>"; };
+		7CD40DE51DAB76F00001680D /* RequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestAPI.m; sourceTree = "<group>"; };
+		7CD40DE71DAB7BDD0001680D /* Openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Openssl.framework; sourceTree = "<group>"; };
 		86719F7B1C561DC7C9229BEF /* Pods-jianwang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.release.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.release.xcconfig"; sourceTree = "<group>"; };
 		DED620461DAA326B00B2FFD2 /* jianwang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jianwang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED6204A1DAA326B00B2FFD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B562719DA9792532B265DCF0 /* libPods-jianwang.a in Frameworks */,
+				7CD40DE81DAB7BDD0001680D /* Openssl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,13 +141,43 @@
 		7CD40DCB1DAB6B960001680D /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				7CD40DCE1DAB716B0001680D /* SCZ-BasicEncodingRules */,
 			);
 			name = 3rd;
+			sourceTree = "<group>";
+		};
+		7CD40DCE1DAB716B0001680D /* SCZ-BasicEncodingRules */ = {
+			isa = PBXGroup;
+			children = (
+				7CD40DCF1DAB71A80001680D /* BasicEncodingRules.h */,
+				7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */,
+			);
+			name = "SCZ-BasicEncodingRules";
+			sourceTree = "<group>";
+		};
+		7CD40DD21DAB71EC0001680D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7CD40DE41DAB76F00001680D /* RequestAPI.h */,
+				7CD40DE51DAB76F00001680D /* RequestAPI.m */,
+				7CD40DD31DAB72140001680D /* AppAPIClient.h */,
+				7CD40DD41DAB72140001680D /* AppAPIClient.m */,
+				7CD40DD51DAB72140001680D /* NSData+Base64.h */,
+				7CD40DD61DAB72140001680D /* NSData+Base64.m */,
+				7CD40DD71DAB72140001680D /* NSString+Crypt.h */,
+				7CD40DD81DAB72140001680D /* NSString+Crypt.m */,
+				7CD40DD91DAB72140001680D /* StorageMgr.h */,
+				7CD40DDA1DAB72140001680D /* StorageMgr.m */,
+				7CD40DDB1DAB72140001680D /* Utilities.h */,
+				7CD40DDC1DAB72140001680D /* Utilities.m */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		9569F153DF25C25D132E0D82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7CD40DCC1DAB71380001680D /* Openssl.framework */,
 				4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */,
 			);
 			name = Frameworks;
@@ -140,6 +195,8 @@
 		DED6203D1DAA326B00B2FFD2 = {
 			isa = PBXGroup;
 			children = (
+				7CD40DE71DAB7BDD0001680D /* Openssl.framework */,
+				7CD40DD21DAB71EC0001680D /* Utility */,
 				7CD40DCB1DAB6B960001680D /* 3rd */,
 				7CD40DC91DAB6A970001680D /* View */,
 				7CD40DC81DAB6A930001680D /* Model */,
@@ -175,7 +232,7 @@
 		DED620491DAA326B00B2FFD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7CD40DCA1DAB6B3B0001680D /* PrefixHeader.pch */,
+				7CD40DE31DAB75720001680D /* PrefixHeader.pch */,
 				DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */,
 				DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */,
 				DED6204A1DAA326B00B2FFD2 /* main.m */,
@@ -382,7 +439,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD40DDF1DAB72140001680D /* NSString+Crypt.m in Sources */,
+				7CD40DE01DAB72140001680D /* StorageMgr.m in Sources */,
 				DED620571DAA326B00B2FFD2 /* jianwang.xcdatamodeld in Sources */,
+				7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */,
+				7CD40DE11DAB72140001680D /* Utilities.m in Sources */,
+				7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */,
+				7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */,
+				7CD40DE61DAB76F00001680D /* RequestAPI.m in Sources */,
 				DED620511DAA326B00B2FFD2 /* ViewController.m in Sources */,
 				DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */,
 				DED6204B1DAA326B00B2FFD2 /* main.m in Sources */,
@@ -527,6 +591,10 @@
 			baseConfigurationReference = 2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
@@ -541,6 +609,10 @@
 			baseConfigurationReference = 86719F7B1C561DC7C9229BEF /* Pods-jianwang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
