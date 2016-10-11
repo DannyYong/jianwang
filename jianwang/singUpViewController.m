@@ -108,5 +108,42 @@
     
 }
 - (IBAction)singUpAction:(UIButton *)sender {
+    if (_userNamePhoneNumeber.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneEmpity", nil) andTitle:nil onView:self];
+        return;
+    }
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    if (_userNamePhoneNumeber.text.length != 11 || [_userNamePhoneNumeber.text rangeOfCharacterFromSet:notDigits].location != NSNotFound) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneError", nil) andTitle:nil onView:self];
+        return;
+    }
+    if (_possWord.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PasswordEmpity", nil) andTitle:nil onView:self];
+        return;
+    }
+    if (_veriCode.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"VeriCodeEmpity", nil) andTitle:nil onView:self];
+        return;
+    }
+    [self readyForEncoding];
+
 }
+- (void)readyForEncoding{
+    
+    NSString *requset = @"/login/getKey";
+    NSDictionary *parameters = @{
+                                 @"deviceType" : @7001,@"deviceId" : [Utilities uniqueVendor]
+                                 };
+    //创建菊花膜
+    UIActivityIndicatorView *aiv =[Utilities getCoverOnView:self.view];
+    [RequestAPI getURL:requset withParameters:parameters success:^(id responseObject) {
+        [aiv stopAnimating];
+        NSLog(@"get responseObject = %@",responseObject);
+        if ([responseObject[@"resultFlag"] integerValue] == 8001) {
+            //NSDictionary *dic = [responseObject]
+        };
+    } failure:^(NSError *error) {
+        
+    }];
+};
 @end
