@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200A11DACBC88004D65E5 /* singUpViewController.m */; };
+		7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C3200A71DACC5E4004D65E5 /* Localizable.strings */; };
+		7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */; };
 		7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */; };
 		7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD41DAB72140001680D /* AppAPIClient.m */; };
 		7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD61DAB72140001680D /* NSData+Base64.m */; };
@@ -18,7 +21,6 @@
 		B562719DA9792532B265DCF0 /* libPods-jianwang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */; };
 		DED6204B1DAA326B00B2FFD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204A1DAA326B00B2FFD2 /* main.m */; };
 		DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */; };
-		DED620511DAA326B00B2FFD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED620501DAA326B00B2FFD2 /* ViewController.m */; };
 		DED620541DAA326B00B2FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED620521DAA326B00B2FFD2 /* Main.storyboard */; };
 		DED620571DAA326B00B2FFD2 /* jianwang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED620551DAA326B00B2FFD2 /* jianwang.xcdatamodeld */; };
 		DED620591DAA326B00B2FFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED620581DAA326B00B2FFD2 /* Assets.xcassets */; };
@@ -47,6 +49,12 @@
 /* Begin PBXFileReference section */
 		2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.debug.xcconfig"; sourceTree = "<group>"; };
 		4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jianwang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C32009F1DACBB35004D65E5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7C3200A01DACBC88004D65E5 /* singUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singUpViewController.h; sourceTree = "<group>"; };
+		7C3200A11DACBC88004D65E5 /* singUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singUpViewController.m; sourceTree = "<group>"; };
+		7C3200A61DACC5E4004D65E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7C3200A91DACCF19004D65E5 /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
+		7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		7CD40DCC1DAB71380001680D /* Openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Openssl.framework; path = ../../iOS_21/3rd/Openssl.framework; sourceTree = "<group>"; };
 		7CD40DCF1DAB71A80001680D /* BasicEncodingRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEncodingRules.h; path = "SCZ-BasicEncodingRules/BasicEncodingRules.h"; sourceTree = "<group>"; };
 		7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEncodingRules.m; path = "SCZ-BasicEncodingRules/BasicEncodingRules.m"; sourceTree = "<group>"; };
@@ -69,8 +77,6 @@
 		DED6204A1DAA326B00B2FFD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DED6204F1DAA326B00B2FFD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = jianwang/ViewController.h; sourceTree = "<group>"; };
-		DED620501DAA326B00B2FFD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = jianwang/ViewController.m; sourceTree = "<group>"; };
 		DED620531DAA326B00B2FFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DED620561DAA326B00B2FFD2 /* jianwang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = jianwang.xcdatamodel; sourceTree = "<group>"; };
 		DED620581DAA326B00B2FFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = jianwang/Assets.xcassets; sourceTree = "<group>"; };
@@ -111,11 +117,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C32009E1DACBAC7004D65E5 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				7C32009F1DACBB35004D65E5 /* Constants.h */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		7C3200A81DACCEF0004D65E5 /* AliUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AliUtil;
+			sourceTree = "<group>";
+		};
 		7CD40DC71DAB6A8E0001680D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DED6204F1DAA326B00B2FFD2 /* ViewController.h */,
-				DED620501DAA326B00B2FFD2 /* ViewController.m */,
+				7C3200A01DACBC88004D65E5 /* singUpViewController.h */,
+				7C3200A11DACBC88004D65E5 /* singUpViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -158,6 +179,9 @@
 		7CD40DD21DAB71EC0001680D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7C3200A81DACCEF0004D65E5 /* AliUtil */,
+				7C3200A91DACCF19004D65E5 /* ErrorHandler.h */,
+				7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */,
 				7CD40DE41DAB76F00001680D /* RequestAPI.h */,
 				7CD40DE51DAB76F00001680D /* RequestAPI.m */,
 				7CD40DD31DAB72140001680D /* AppAPIClient.h */,
@@ -195,6 +219,7 @@
 		DED6203D1DAA326B00B2FFD2 = {
 			isa = PBXGroup;
 			children = (
+				7C32009E1DACBAC7004D65E5 /* Constant */,
 				7CD40DE71DAB7BDD0001680D /* Openssl.framework */,
 				7CD40DD21DAB71EC0001680D /* Utility */,
 				7CD40DCB1DAB6B960001680D /* 3rd */,
@@ -223,7 +248,6 @@
 		DED620481DAA326B00B2FFD2 /* jianwang */ = {
 			isa = PBXGroup;
 			children = (
-				DED6205D1DAA326B00B2FFD2 /* Info.plist */,
 				DED620491DAA326B00B2FFD2 /* Supporting Files */,
 			);
 			path = jianwang;
@@ -232,11 +256,12 @@
 		DED620491DAA326B00B2FFD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DED6205D1DAA326B00B2FFD2 /* Info.plist */,
+				7C3200A71DACC5E4004D65E5 /* Localizable.strings */,
 				7CD40DE31DAB75720001680D /* PrefixHeader.pch */,
 				DED6204D1DAA326B00B2FFD2 /* AppDelegate.m */,
 				DED6204C1DAA326B00B2FFD2 /* AppDelegate.h */,
 				DED6204A1DAA326B00B2FFD2 /* main.m */,
-				DED620681DAA326C00B2FFD2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				DED620661DAA326B00B2FFD2 /* jianwangTests.m */,
+				DED620681DAA326C00B2FFD2 /* Info.plist */,
 			);
 			path = jianwangTests;
 			sourceTree = "<group>";
@@ -365,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED6205C1DAA326B00B2FFD2 /* LaunchScreen.storyboard in Resources */,
+				7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */,
 				DED620591DAA326B00B2FFD2 /* Assets.xcassets in Resources */,
 				DED620541DAA326B00B2FFD2 /* Main.storyboard in Resources */,
 			);
@@ -446,8 +473,9 @@
 				7CD40DE11DAB72140001680D /* Utilities.m in Sources */,
 				7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */,
 				7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */,
+				7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */,
 				7CD40DE61DAB76F00001680D /* RequestAPI.m in Sources */,
-				DED620511DAA326B00B2FFD2 /* ViewController.m in Sources */,
+				7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */,
 				DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */,
 				DED6204B1DAA326B00B2FFD2 /* main.m in Sources */,
 			);
@@ -485,6 +513,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7C3200A71DACC5E4004D65E5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C3200A61DACC5E4004D65E5 /* Base */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DED620521DAA326B00B2FFD2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

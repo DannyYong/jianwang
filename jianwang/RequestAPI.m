@@ -7,11 +7,11 @@
 //
 
 #import "RequestAPI.h"
-
+#import "Constants.h"
 @implementation RequestAPI
 
 + (void)getURL:(NSString *)request withParameters:(NSDictionary *)parameter success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
-    NSString *server = @"http://club.fisheep.com.cn";
+    NSString *server = kServer;
     NSString *url = [NSString stringWithFormat:@"%@%@", server, request];
     NSString *decodedURL = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [[AppAPIClient sharedClient] GET:decodedURL parameters:parameter  progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
@@ -22,7 +22,7 @@
 }
 
 + (void)postURL:(NSString *)request withParameters:(NSDictionary *)parameter success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
-    NSString *server = @"http://club.fisheep.com.cn";
+    NSString *server = kServer;
     NSString *url = [NSString stringWithFormat:@"%@%@", server, request];
     NSString *decodedURL = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [[AppAPIClient sharedJSONClient] POST:decodedURL parameters:parameter progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {

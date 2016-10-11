@@ -15,5 +15,5 @@
 #import "StorageMgr.h"
 #import "RequestAPI.h"
 #import "NSString+Crypt.h"
-
+#import "ErrorHandler.h"
 #endif /* PrefixHeader_pch */

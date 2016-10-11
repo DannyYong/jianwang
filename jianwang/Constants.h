@@ -31,4 +31,7 @@
 //清理内存
 #define FRelease(x) {[x removeFromSuperview]; x = nil;}
 
+//设置Server
+//#define kServer @"http://club.fisheep.com.cn"
+#define kServer @"http://beilywx.xicp.net:43986"
 #endif
