@@ -11,14 +11,17 @@
 @interface singUpViewController (){
     NSInteger time;
 }
+@property (weak, nonatomic) IBOutlet UIButton *singUpOut;
 @property (weak, nonatomic) IBOutlet UITextField *userNamePhoneNumeber;
 @property (weak, nonatomic) IBOutlet UITextField *veriCode;
 @property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
 @property (weak, nonatomic) IBOutlet UITextField *possWord;
 @property (weak, nonatomic) IBOutlet UITextField *nicKName;
+- (IBAction)getCodeAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
-- (IBAction)getCodeAction:(UIButton *)sender;
-- (IBAction)singUpAction:(UIButton *)sender;
+- (IBAction)singUpAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
+
 /** 定时器 */
 @property(nonatomic ,strong)NSTimer *timer;
 @end
@@ -27,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -46,7 +49,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//点击View隐藏键盘
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+//- (BOOL)textFileShouldReturn:(UITextField *)textFileld{
+//    [textFileld resignFirstResponder];
+//    return YES;
+//}
 /*
 #pragma mark - Navigation
 
@@ -57,60 +67,48 @@
 }
 */
 /** 获取验证码 */
-- (IBAction)getCodeAction:(UIButton *)sender {
+- (IBAction)getCodeAction:(UIButton *)sender forEvent:(UIEvent *)event {
     if (_userNamePhoneNumeber.text.length == 0) {
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneEmpty", nil) andTitle:nil onView:self];
         return;
-                                                }
+    }
     NSCharacterSet *notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
     //验证输入的手机号是否正确
     if (_userNamePhoneNumeber.text.length !=11 || [_userNamePhoneNumeber.text rangeOfCharacterFromSet:notDigits].location != NSNotFound) {
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneError", nil) andTitle:nil onView:self];
         return;
-                                 }
+    }
+   
+    
     //验证码接口对接
-        NSString *request = @"/register/verificationCode";
-        NSDictionary *parameters = @{
-                                     @"userTel" : _userNamePhoneNumeber.text,@"type" : @1
-                                     };
-        [RequestAPI getURL:request withParameters:parameters success:^(id responseObject) {
-            NSLog(@"responseObject = %@",responseObject);
-            if ([responseObject[@"resultFlag"] integerValue] != 8001) {
-                NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"] integerValue]];
-                [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
-            }
-        } failure:^(NSError *error) {
-            NSLog(@"errpr = %@",error.description);
-            [Utilities popUpAlertViewWithMsg: NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
-            
-        }];
+    NSString *request = @"/register/verificationCode";
+    NSDictionary *parameters = @{
+                                 @"userTel" : _userNamePhoneNumeber.text,@"type" : @1
+                                 };
+    [RequestAPI getURL:request withParameters:parameters success:^(id responseObject) {
+        NSLog(@"responseObject = %@",responseObject);
+        if ([responseObject[@"resultFlag"] integerValue] != 8001) {
+            NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"] integerValue]];
+            [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"errpr = %@",error.description);
+        [Utilities popUpAlertViewWithMsg: NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
+        
+    }];
     
     //定时器时间
     time = 60;
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     [_timer fire];
     
+}
 
-}
-/** 给按钮设置文本 */
-- (void)timeAction{
-    if (time >= 0) {
-        _getCodeBtn.enabled = NO;
-        _getCodeBtn.titleLabel.text = [NSString stringWithFormat:@"%ld%@",(long)time,NSLocalizedString(@"CanObtain", nil)];
-        [_getCodeBtn setTitle:[NSString stringWithFormat:@"%ld%@",(long)time,NSLocalizedString(@"CanObtain", nil)] forState:UIControlStateNormal];
-        time --;
-    }else {
-        _getCodeBtn.enabled = YES;
-        [_getCodeBtn setTitle:NSLocalizedString(@"GetCode", nil) forState:UIControlStateNormal];
-        if (_timer) {
-            [_timer invalidate];
-            _timer = nil;
-        }
-    }
-    
-}
-- (IBAction)singUpAction:(UIButton *)sender {
+- (IBAction)singUpAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    //点击注册按钮各种情况判断
+   
     if (_userNamePhoneNumeber.text.length == 0) {
+        
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneEmpity", nil) andTitle:nil onView:self];
         return;
     }
@@ -131,9 +129,13 @@
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NickNameEmpity", nil) andTitle:nil onView:self];
         return;
     }
+    if (_userNamePhoneNumeber.text.length == 0 || _nicKName.text.length == 0 || _veriCode.text.length == 0 || _possWord.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"CoCo", nil) andTitle:nil onView:self];
+    }
     [self readyForEncoding];
-
 }
+
+/** 注册与登录时，密码进行加RSA加密，公匙和密匙 */
 - (void)readyForEncoding{
     
     NSString *requset = @"/login/getKey";
@@ -152,6 +154,7 @@
             [[StorageMgr singletonStorageMgr]removeObjectForKey:@"Exponent"];
             [[StorageMgr singletonStorageMgr]addKey:@"Modulus" andValue:[dic objectForKey:@"Modulus"]];
             [[StorageMgr singletonStorageMgr]addKey:@"Exponent" andValue:[dic objectForKey:@"Exponent"]];
+            [self singUp];
             
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
@@ -189,5 +192,22 @@
         NSLog(@"post error = %@",error.description);
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
     }];
+}
+/** 给定时器按钮设置文本 */
+- (void)timeAction{
+    if (time >= 0) {
+        _getCodeBtn.enabled = NO;
+        _getCodeBtn.titleLabel.text = [NSString stringWithFormat:@"%ld%@",(long)time,NSLocalizedString(@"CanObtain", nil)];
+        [_getCodeBtn setTitle:[NSString stringWithFormat:@"%ld%@",(long)time,NSLocalizedString(@"CanObtain", nil)] forState:UIControlStateNormal];
+        time --;
+    }else {
+        _getCodeBtn.enabled = YES;
+        [_getCodeBtn setTitle:NSLocalizedString(@"GetCode", nil) forState:UIControlStateNormal];
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
+    }
+
 }
 @end

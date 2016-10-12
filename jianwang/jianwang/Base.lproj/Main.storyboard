@@ -61,7 +61,7 @@
                                 <rect key="frame" x="258" y="164" width="121" height="30"/>
                                 <state key="normal" title="点击获取验证码"/>
                                 <connections>
-                                    <action selector="getCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQA-GU-0gI"/>
+                                    <action selector="getCodeAction:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJW-HW-ten"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPv-Pe-EeV">
@@ -71,7 +71,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="singUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tum-55-Qyz"/>
+                                    <action selector="singUpAction:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WTJ-5Y-KcI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-BF-Pod">
@@ -132,9 +132,10 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="getCodeBtn" destination="8bi-ec-wl1" id="mNw-sC-0UB"/>
+                        <outlet property="getCodeBtn" destination="8bi-ec-wl1" id="rLb-Zl-akX"/>
                         <outlet property="nicKName" destination="TOO-nN-Iva" id="Rth-jY-osK"/>
                         <outlet property="possWord" destination="rMT-iY-U5j" id="gdg-G5-1ob"/>
+                        <outlet property="singUpOut" destination="kPv-Pe-EeV" id="rnb-zM-Yor"/>
                         <outlet property="userNamePhoneNumeber" destination="wa5-BF-Pod" id="ynR-fC-NlU"/>
                         <outlet property="veriCode" destination="BwK-SA-yZT" id="xjx-7C-icD"/>
                     </connections>
