@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    [self naviLayout];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -38,6 +38,11 @@
     if (![[self.navigationController viewControllers] containsObject:self]) {
         [self releaseData];
     }
+}
+- (void)naviLayout {
+   
+    self.navigationItem.title = @"注册";
+   
 }
 - (void)releaseData{
     if (_timer) {
@@ -56,6 +61,7 @@
 //- (BOOL)textFileShouldReturn:(UITextField *)textFileld{
 //    [textFileld resignFirstResponder];
 //    return YES;
+
 //}
 /*
 #pragma mark - Navigation

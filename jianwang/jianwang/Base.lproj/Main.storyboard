@@ -1,30 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mzr-lO-zPa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9tt-40-QXv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sing In View Controller-->
         <scene sceneID="xnK-PC-grE">
             <objects>
-                <viewController id="hoK-qw-WBM" sceneMemberID="viewController">
+                <viewController id="hoK-qw-WBM" customClass="singInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="258-je-Ncs"/>
                         <viewControllerLayoutGuide type="bottom" id="XbZ-ep-hif"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QO9-Xa-zfA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9g-u5-vWl">
+                                <rect key="frame" x="60" y="111" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-em-VgV">
+                                <rect key="frame" x="60" y="171" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ESO-PH-rfe">
+                                <rect key="frame" x="129" y="102" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnh-Ss-THg">
+                                <rect key="frame" x="129" y="156" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UWl-uo-5Jd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationItem key="navigationItem" id="UWl-uo-5Jd">
+                        <barButtonItem key="rightBarButtonItem" title="注册" id="09W-fh-bvj">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="5Db-t2-zYK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iF4-PM-DZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="1026"/>
+            <point key="canvasLocation" x="1866.5" y="541.5"/>
         </scene>
         <!--Sing Up View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -147,9 +177,7 @@
                             <constraint firstItem="wa5-BF-Pod" firstAttribute="leading" secondItem="YZ0-hv-GPg" secondAttribute="trailing" constant="15" id="xmw-2C-7qm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lWj-pl-Wxa">
-                        <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="Pdx-66-LN7"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="lWj-pl-Wxa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="getCodeBtn" destination="8bi-ec-wl1" id="rLb-Zl-akX"/>
@@ -162,25 +190,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="1106"/>
+            <point key="canvasLocation" x="2340.5" y="541.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="fZI-o0-acN">
+        <scene sceneID="p1d-uI-7aO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e92-Q5-LvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mzr-lO-zPa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tt-40-QXv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9No-GO-VlQ">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Urt-3S-GBc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bEu-t7-QOc"/>
+                        <segue destination="hoK-qw-WBM" kind="relationship" relationship="rootViewController" id="wpC-GK-Hbc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oW-vJ-aSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="1017"/>
+            <point key="canvasLocation" x="1457" y="383"/>
         </scene>
     </scenes>
 </document>
