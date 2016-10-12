@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *veriCode;
 @property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
 @property (weak, nonatomic) IBOutlet UITextField *possWord;
+@property (weak, nonatomic) IBOutlet UITextField *nicKName;
+
 - (IBAction)getCodeAction:(UIButton *)sender;
 - (IBAction)singUpAction:(UIButton *)sender;
 /** 定时器 */
@@ -125,6 +127,10 @@
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"VeriCodeEmpity", nil) andTitle:nil onView:self];
         return;
     }
+    if (_nicKName.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NickNameEmpity", nil) andTitle:nil onView:self];
+        return;
+    }
     [self readyForEncoding];
 
 }
@@ -140,10 +146,48 @@
         [aiv stopAnimating];
         NSLog(@"get responseObject = %@",responseObject);
         if ([responseObject[@"resultFlag"] integerValue] == 8001) {
-            //NSDictionary *dic = [responseObject]
-        };
+            NSDictionary *dic = [responseObject objectForKey:@"result"];
+            //单例化
+            [[StorageMgr singletonStorageMgr]removeObjectForKey:@"Modulus"];
+            [[StorageMgr singletonStorageMgr]removeObjectForKey:@"Exponent"];
+            [[StorageMgr singletonStorageMgr]addKey:@"Modulus" andValue:[dic objectForKey:@"Modulus"]];
+            [[StorageMgr singletonStorageMgr]addKey:@"Exponent" andValue:[dic objectForKey:@"Exponent"]];
+            
+        }else{
+            NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
+            [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
+            
+        }
+        
     } failure:^(NSError *error) {
+        [aiv stopAnimating];
+        NSLog(@"get error = %@",error.description);
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
         
     }];
 };
+/** 注册接口对接 */
+- (void)singUp{
+    NSString *request = @"/register";
+    NSString *encodedPwd = [NSString encryptWithPublicKeyFromModulusAndExponent:[_possWord.text getMD5_32BitString].UTF8String modulus:[[StorageMgr singletonStorageMgr] objectForKey:@"Modulus"]  exponent:[[StorageMgr singletonStorageMgr]objectForKey:@"Exponent"]];
+    NSDictionary *parameters = @{
+                                 @"userTel":_userNamePhoneNumeber.text, @"userPsw":encodedPwd, @"nickName":_nicKName.text, @"city":@"0510", @"nums":_veriCode.text, @"deviceId":[Utilities uniqueVendor]
+                                 };
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    [RequestAPI postURL:request withParameters:parameters success:^(id responseObject) {
+        [aiv stopAnimating];
+        NSLog(@"post responseObject = %@",responseObject);
+        if ([responseObject[@"resultFlag"] integerValue] == 8001) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+        }else{
+            NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
+            [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
+        }
+    } failure:^(NSError *error) {
+        [aiv stopAnimating];
+        NSLog(@"post error = %@",error.description);
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
+    }];
+}
 @end
