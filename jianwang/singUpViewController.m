@@ -106,6 +106,10 @@
 
 - (IBAction)singUpAction:(UIButton *)sender forEvent:(UIEvent *)event {
     //点击注册按钮各种情况判断
+    if (_userNamePhoneNumeber.text.length == 0 || _nicKName.text.length == 0 || _veriCode.text.length == 0 || _possWord.text.length == 0) {
+        [Utilities popUpAlertViewWithMsg:@"您还未完成所有操作！" andTitle:nil onView:self];
+        return;
+    }
    
     if (_userNamePhoneNumeber.text.length == 0) {
         
@@ -129,9 +133,7 @@
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NickNameEmpity", nil) andTitle:nil onView:self];
         return;
     }
-    if (_userNamePhoneNumeber.text.length == 0 || _nicKName.text.length == 0 || _veriCode.text.length == 0 || _possWord.text.length == 0) {
-        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"CoCo", nil) andTitle:nil onView:self];
-    }
+    
     [self readyForEncoding];
 }
 

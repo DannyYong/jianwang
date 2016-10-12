@@ -6,6 +6,26 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="xnK-PC-grE">
+            <objects>
+                <viewController id="hoK-qw-WBM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="258-je-Ncs"/>
+                        <viewControllerLayoutGuide type="bottom" id="XbZ-ep-hif"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QO9-Xa-zfA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UWl-uo-5Jd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iF4-PM-DZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="1026"/>
+        </scene>
         <!--Sing Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -15,7 +35,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ0-hv-GPg">
@@ -43,29 +63,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-SA-yZT">
-                                <rect key="frame" x="108" y="164" width="145" height="30"/>
+                                <rect key="frame" x="108" y="164" width="122" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rMT-iY-U5j">
-                                <rect key="frame" x="109" y="274" width="270" height="30"/>
+                                <rect key="frame" x="109" y="274" width="231" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-nN-Iva">
-                                <rect key="frame" x="109" y="219" width="270" height="30"/>
+                                <rect key="frame" x="109" y="219" width="231" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-ec-wl1">
-                                <rect key="frame" x="258" y="164" width="121" height="30"/>
+                                <rect key="frame" x="235" y="164" width="105" height="30"/>
                                 <state key="normal" title="点击获取验证码"/>
                                 <connections>
                                     <action selector="getCodeAction:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJW-HW-ten"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPv-Pe-EeV">
-                                <rect key="frame" x="35" y="372" width="344" height="30"/>
+                                <rect key="frame" x="35" y="372" width="305" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -75,12 +95,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-BF-Pod">
-                                <rect key="frame" x="108" y="109" width="271" height="30"/>
+                                <rect key="frame" x="108" y="109" width="232" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="密码为6~20位数字。字母组合，可含下划线" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-PF-Rds">
-                                <rect key="frame" x="35" y="314" width="344" height="33"/>
+                                <rect key="frame" x="35" y="314" width="305" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="vtc-px-rsX"/>
@@ -130,7 +150,7 @@
                     <navigationItem key="navigationItem" id="lWj-pl-Wxa">
                         <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="Pdx-66-LN7"/>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="getCodeBtn" destination="8bi-ec-wl1" id="rLb-Zl-akX"/>
                         <outlet property="nicKName" destination="TOO-nN-Iva" id="Rth-jY-osK"/>
@@ -142,11 +162,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954.5" y="1083.5"/>
+            <point key="canvasLocation" x="1663" y="1106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fZI-o0-acN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e92-Q5-LvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mzr-lO-zPa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9No-GO-VlQ">
@@ -158,9 +179,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bEu-t7-QOc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e92-Q5-LvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="1089"/>
+            <point key="canvasLocation" x="596" y="1017"/>
         </scene>
     </scenes>
 </document>
