@@ -68,6 +68,9 @@
         return;
     }
         [self readyForing];
+    UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"HomeNav"];
+    [self presentViewController:signNC animated:YES completion:nil];
+
 }
 - (void) readyForing{
     NSString *request =@"/login/getKey";
@@ -77,6 +80,8 @@
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
     [RequestAPI getURL:request withParameters:parments success:^(id responseObject) {
         [aiv stopAnimating];
+        
+        
         NSLog(@"get responseObject = %@",responseObject);
         if ([responseObject[@"resultFlag"]integerValue] == 8001) {
             //单例化
@@ -119,7 +124,9 @@
             [self.view endEditing:YES];
             [Utilities setUserDefaults:@"Username" content:_userNameCM.text];
             _passWordCM.text= @"";
+            
             [self dismissModelViewController];
+            
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
             [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];

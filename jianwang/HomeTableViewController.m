@@ -7,7 +7,8 @@
 //
 
 #import "HomeTableViewController.h"
-
+#import "singUpViewController.h"
+#import "singInViewController.h"
 @interface HomeTableViewController ()
 
 @end
@@ -16,14 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
+ //   [self userdaful];
+   }
+//- (BOOL)loginCheck {
+//    if ([[[StorageMgr singletonStorageMgr] objectForKey:@"MemberId"] isKindOfClass:[NSNull class]] || [[StorageMgr singletonStorageMgr] objectForKey:@"MemberId"] == nil) {
+//        return NO;
+//    } else {
+//        return YES;
+//    }
+//}
+//- (void)userdaful{
+//    if ([self loginCheck]) {
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        id mainViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainView"];
+//        
+//        [self presentViewController:mainViewController animated:YES completion:^{
+//        }];
+//        [self performSegueWithIdentifier:@"Voucher2Purchase" sender:self];
+//    } else {
+//        UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"SignNavi"];
+//        [self presentViewController:signNC animated:YES completion:nil];
+//    }
+//
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,12 +48,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+    
     return 0;
 }
 

@@ -11,6 +11,7 @@
 		7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200A11DACBC88004D65E5 /* singUpViewController.m */; };
 		7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C3200A71DACC5E4004D65E5 /* Localizable.strings */; };
 		7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */; };
+		7C832C051DAF7D990042942A /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C832C041DAF7D990042942A /* HomeTableViewController.m */; };
 		7C83482D1DAE1C9600C8CD57 /* singInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C83482C1DAE1C9600C8CD57 /* singInViewController.m */; };
 		7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */; };
 		7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD41DAB72140001680D /* AppAPIClient.m */; };
@@ -59,6 +60,8 @@
 		7C3200A61DACC5E4004D65E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C3200A91DACCF19004D65E5 /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
 		7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
+		7C832C031DAF7D990042942A /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		7C832C041DAF7D990042942A /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		7C83482B1DAE1C9600C8CD57 /* singInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singInViewController.h; sourceTree = "<group>"; };
 		7C83482C1DAE1C9600C8CD57 /* singInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singInViewController.m; sourceTree = "<group>"; };
 		7CD40DCC1DAB71380001680D /* Openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Openssl.framework; path = ../../iOS_21/3rd/Openssl.framework; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 		7CD40DC71DAB6A8E0001680D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C832C031DAF7D990042942A /* HomeTableViewController.h */,
+				7C832C041DAF7D990042942A /* HomeTableViewController.m */,
 				7C83482B1DAE1C9600C8CD57 /* singInViewController.h */,
 				7C83482C1DAE1C9600C8CD57 /* singInViewController.m */,
 				7C3200A01DACBC88004D65E5 /* singUpViewController.h */,
@@ -480,6 +485,7 @@
 				7CD40DE01DAB72140001680D /* StorageMgr.m in Sources */,
 				DED620571DAA326B00B2FFD2 /* jianwang.xcdatamodeld in Sources */,
 				7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */,
+				7C832C051DAF7D990042942A /* HomeTableViewController.m in Sources */,
 				7CD40DE11DAB72140001680D /* Utilities.m in Sources */,
 				1F8B90F51DAE70E900F20429 /* Profile.m in Sources */,
 				7C83482D1DAE1C9600C8CD57 /* singInViewController.m in Sources */,
