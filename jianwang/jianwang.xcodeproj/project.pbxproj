@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F8B90F51DAE70E900F20429 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B90F41DAE70E900F20429 /* Profile.m */; settings = {ASSET_TAGS = (); }; };
+		1F8B90F51DAE70E900F20429 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B90F41DAE70E900F20429 /* Profile.m */; };
 		7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200A11DACBC88004D65E5 /* singUpViewController.m */; };
 		7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C3200A71DACC5E4004D65E5 /* Localizable.strings */; };
 		7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */; };
@@ -647,7 +647,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.jianwang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,7 +666,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = jianwang/PrefixHeader.pch;
 				INFOPLIST_FILE = jianwang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.jianwang;
 				PRODUCT_NAME = "$(TARGET_NAME)";

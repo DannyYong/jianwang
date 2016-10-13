@@ -32,6 +32,12 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (![[Utilities getUserDefaults:@"Username"] isKindOfClass:[NSNull class] ]) {
+        _userNameCM.text = [Utilities getUserDefaults:@"Username"];
+    }
+}
 /*
 #pragma mark - Navigation
 
@@ -43,6 +49,11 @@
 */
 
 - (IBAction)singInCM:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (_userNameCM.text.length == 0 && _passWordCM.text.length == 0 ) {
+        [Utilities popUpAlertViewWithMsg:@"请输入内容" andTitle:nil onView:self];
+        return;
+    }
+
     if (_userNameCM.text.length == 0) {
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PhoneEmpity", nil) andTitle:nil onView:self];
         return;
@@ -56,7 +67,7 @@
         [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"PasswordEmpity",nil) andTitle:nil onView:self];
         return;
     }
-    [self readyForing];
+        [self readyForing];
 }
 - (void) readyForing{
     NSString *request =@"/login/getKey";
@@ -103,11 +114,26 @@
         if ([responseObject[@"resultFlag"]integerValue] == 8001) {
             NSDictionary *proFileInfo = responseObject[@"result"];
             [[StorageMgr singletonStorageMgr]addKey:@"MemberId" andValue:proFileInfo[@"memberId"]];
+            Profile *profile = [[Profile alloc]initWithDictionary:proFileInfo];
+            [[StorageMgr singletonStorageMgr]addKey:@"MemberInfo" andValue:profile];
+            [self.view endEditing:YES];
+            [Utilities setUserDefaults:@"Username" content:_userNameCM.text];
+            _passWordCM.text= @"";
+            [self dismissModelViewController];
+        }else{
+            NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
+            [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
             
         }
     } failure:^(NSError *error) {
+        [avi stopAnimating];
+        NSLog(@"post error = %@",error.description);
+        [Utilities popUpAlertViewWithMsg:NSLocalizedString(@"NetworkError", nil) andTitle:nil onView:self];
         
     }];
     
+}
+- (void) dismissModelViewController{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

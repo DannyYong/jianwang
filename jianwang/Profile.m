@@ -19,6 +19,8 @@
     _birthday = [dic[@"birthday"] isKindOfClass:[NSNull class]] ? @"" : dic[@"birthday"];
     _idCard = [dic[@"identificationcard"] isKindOfClass:[NSNull class]] ? @"" : dic[@"identificationcard"];
     _avatarUrl = [dic[@"memberUrl"] isKindOfClass:[NSNull class]] ? @"" : dic[@"memberUrl"];
+     _memberpoint = [dic[@"memberPoint"] isKindOfClass:[NSNull class]]? @"": dic[@"memberPoint"];
+    _collection = [dic[@"collection"] isKindOfClass:[NSNull class] ] ? @"":dic[@"collection"];
     if ([dic[@"memberSex"] isKindOfClass:[NSNull class]]) {
         _gender = @"";
     } else {
@@ -34,7 +36,7 @@
                 break;
         }
     }
-    
+   
     return self;
 }
 

@@ -642,13 +642,14 @@ static NSString * AFBase64EncodedStringFromString(NSString *string) {
 {
     __autoreleasing NSString *encodedString;
     NSString *originalString = (NSString *)self;
-    encodedString = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(
-                                                                                          NULL,
-                                                                                          (__bridge CFStringRef)originalString,
-                                                                                          NULL,
-                                                                                          (CFStringRef)@":!*();@/&?#[]+$,='%’\"",
-                                                                                          kCFStringEncodingUTF8
-                                                                                          );
+//    encodedString = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(
+//                                                                                          NULL,
+//                                                                                          (__bridge CFStringRef)originalString,
+//                                                                                          NULL,
+//                                                                                          (CFStringRef)@":!*();@/&?#[]+$,='%’\"",
+//                                                                                          kCFStringEncodingUTF8
+//                                                                                          );
+    encodedString = [originalString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@":!*();@/&?#[]+$,='%’\""]];
     return encodedString;
 }
 
@@ -656,12 +657,14 @@ static NSString * AFBase64EncodedStringFromString(NSString *string) {
 {
     __autoreleasing NSString *decodedString;
     NSString *originalString = (NSString *)self;
-    decodedString = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
-                                                                                                          NULL,
-                                                                                                          (__bridge CFStringRef)originalString,
-                                                                                                          CFSTR(""),
-                                                                                                          kCFStringEncodingUTF8
-                                                                                                          );
+//    decodedString = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
+//                                                                                                          NULL,
+//                                                                                                          (__bridge CFStringRef)originalString,
+//                                                                                                          CFSTR(""),
+//                                                                                                          kCFStringEncodingUTF8
+//                                                                                                          );
+//    return decodedString;
+    decodedString = [originalString stringByRemovingPercentEncoding];
     return decodedString;
 }
 
