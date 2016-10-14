@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iF4-PM-DZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681.5" y="541.5"/>
+            <point key="canvasLocation" x="1251.5" y="173.5"/>
         </scene>
         <!--Sing Up View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -231,12 +231,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3152.5" y="541.5"/>
+            <point key="canvasLocation" x="1650.5" y="164.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p1d-uI-7aO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tt-40-QXv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="singInnav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9tt-40-QXv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Urt-3S-GBc">
@@ -250,9 +250,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oW-vJ-aSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="489"/>
+            <point key="canvasLocation" x="845" y="71"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="Qil-45-u1Q">
             <objects>
                 <tableViewController id="D06-Hv-rFn" sceneMemberID="viewController">
@@ -275,14 +275,14 @@
                             <outlet property="delegate" destination="D06-Hv-rFn" id="wUe-Kp-Lkg"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="C94-8B-oE8"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="C94-8B-oE8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mu-5j-KV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214.5" y="1007.5"/>
+            <point key="canvasLocation" x="388.5" y="1013.5"/>
         </scene>
-        <!--Item-->
+        <!--Home Table View Controller-->
         <scene sceneID="OAA-jg-P4g">
             <objects>
                 <tableViewController id="lne-o3-wnM" customClass="HomeTableViewController" sceneMemberID="viewController">
@@ -305,13 +305,13 @@
                             <outlet property="delegate" destination="lne-o3-wnM" id="zr7-Ng-sRi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="6ZU-am-6o3"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="6ZU-am-6o3"/>
                     <navigationItem key="navigationItem" id="zFr-1y-eK1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3w-Ps-E39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-276.5" y="974.5"/>
+            <point key="canvasLocation" x="-62.5" y="1018.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fjz-Sd-VPP">
@@ -332,7 +332,7 @@
             </objects>
             <point key="canvasLocation" x="214" y="174"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="7mM-5O-KRc">
             <objects>
                 <tableViewController id="koA-2B-sbH" sceneMemberID="viewController">
@@ -355,12 +355,12 @@
                             <outlet property="delegate" destination="koA-2B-sbH" id="NWh-R2-lvr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="QBu-wD-T0S"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="QBu-wD-T0S"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcq-oo-e9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574.5" y="1032.5"/>
+            <point key="canvasLocation" x="782.5" y="984.5"/>
         </scene>
     </scenes>
 </document>

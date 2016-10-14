@@ -16,6 +16,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+   // 是第一次
+    
+    WSMovieController *wsCtrl = [[WSMovieController alloc]init];
+    wsCtrl.movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong"ofType:@"mp4"]];
+    self.window.rootViewController = wsCtrl;
+    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirstLogin"];
+//    
+//    BOOL isFirstLogin = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isFirstLogin"] boolValue];
+//    //    if (!isFirstLogin) {
+    //        //是第一次
+    //        self.window.rootViewController = [[WSMovieController alloc]init];
+    //        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirstLogin"];
+    //    }else{
+    //        //不是首次启动
+    //        ViewController *viewCtrl = [[ViewController alloc]init];
+    //        self.window.rootViewController = viewCtrl;
+    //    }
+ 
+
     // Override point for customization after application launch.
     return YES;
 }

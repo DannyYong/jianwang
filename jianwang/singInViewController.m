@@ -68,8 +68,7 @@
         return;
     }
         [self readyForing];
-    UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"HomeNav"];
-    [self presentViewController:signNC animated:YES completion:nil];
+    
 
 }
 - (void) readyForing{
@@ -90,7 +89,9 @@
             [[StorageMgr singletonStorageMgr]removeObjectForKey:@"Exponent"];
             [[StorageMgr singletonStorageMgr]addKey:@"Modulus" andValue:[dic objectForKey: @"modulus"] ];
             [[StorageMgr singletonStorageMgr]addKey:@"Exponent" andValue:[dic objectForKey: @"exponent"]];
+           
             [self singIn];
+            
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
             [Utilities popUpAlertViewWithMsg:errorDesc andTitle:nil onView:self];
@@ -121,9 +122,10 @@
             [[StorageMgr singletonStorageMgr]addKey:@"MemberId" andValue:proFileInfo[@"memberId"]];
             Profile *profile = [[Profile alloc]initWithDictionary:proFileInfo];
             [[StorageMgr singletonStorageMgr]addKey:@"MemberInfo" andValue:profile];
+           
             [self.view endEditing:YES];
             [Utilities setUserDefaults:@"Username" content:_userNameCM.text];
-            _passWordCM.text= @"";
+            _passWordCM.text = @"";
             
             [self dismissModelViewController];
             
@@ -140,6 +142,7 @@
     }];
     
 }
+
 - (void) dismissModelViewController{
     [self dismissViewControllerAnimated:YES completion:nil];
 }

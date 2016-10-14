@@ -104,7 +104,7 @@
     }];
     
     //定时器时间
-    time = 60;
+    time = 90;
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     [_timer fire];
     
@@ -141,6 +141,7 @@
     }
     
     [self readyForEncoding];
+    
 }
 
 /** 注册与登录时，密码进行加RSA加密，公匙和密匙 */
@@ -162,7 +163,9 @@
             [[StorageMgr singletonStorageMgr]removeObjectForKey:@"Exponent"];
             [[StorageMgr singletonStorageMgr]addKey:@"Modulus" andValue:[dic objectForKey:@"Modulus"]];
             [[StorageMgr singletonStorageMgr]addKey:@"Exponent" andValue:[dic objectForKey:@"Exponent"]];
+            
             [self singUp];
+            
             
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];
@@ -189,7 +192,8 @@
         [aiv stopAnimating];
         NSLog(@"post responseObject = %@",responseObject);
         if ([responseObject[@"resultFlag"] integerValue] == 8001) {
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"HomeNav"];
+            [self presentViewController:signNC animated:YES completion:nil];
             
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];

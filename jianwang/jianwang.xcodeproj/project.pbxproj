@@ -13,6 +13,8 @@
 		7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */; };
 		7C832C051DAF7D990042942A /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C832C041DAF7D990042942A /* HomeTableViewController.m */; };
 		7C83482D1DAE1C9600C8CD57 /* singInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C83482C1DAE1C9600C8CD57 /* singInViewController.m */; };
+		7C8C68251DB0BFCB0027988C /* WSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C68241DB0BFCB0027988C /* WSMovieController.m */; };
+		7C8C68271DB0C04F0027988C /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C68261DB0C04F0027988C /* qidong.mp4 */; };
 		7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */; };
 		7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD41DAB72140001680D /* AppAPIClient.m */; };
 		7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD40DD61DAB72140001680D /* NSData+Base64.m */; };
@@ -64,6 +66,9 @@
 		7C832C041DAF7D990042942A /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		7C83482B1DAE1C9600C8CD57 /* singInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singInViewController.h; sourceTree = "<group>"; };
 		7C83482C1DAE1C9600C8CD57 /* singInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singInViewController.m; sourceTree = "<group>"; };
+		7C8C68231DB0BFCB0027988C /* WSMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMovieController.h; sourceTree = "<group>"; };
+		7C8C68241DB0BFCB0027988C /* WSMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMovieController.m; sourceTree = "<group>"; };
+		7C8C68261DB0C04F0027988C /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
 		7CD40DCC1DAB71380001680D /* Openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Openssl.framework; path = ../../iOS_21/3rd/Openssl.framework; sourceTree = "<group>"; };
 		7CD40DCF1DAB71A80001680D /* BasicEncodingRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEncodingRules.h; path = "SCZ-BasicEncodingRules/BasicEncodingRules.h"; sourceTree = "<group>"; };
 		7CD40DD01DAB71A80001680D /* BasicEncodingRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEncodingRules.m; path = "SCZ-BasicEncodingRules/BasicEncodingRules.m"; sourceTree = "<group>"; };
@@ -193,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				7C3200A81DACCEF0004D65E5 /* AliUtil */,
+				7C8C68231DB0BFCB0027988C /* WSMovieController.h */,
+				7C8C68241DB0BFCB0027988C /* WSMovieController.m */,
 				1F8B90F31DAE70E900F20429 /* Profile.h */,
 				1F8B90F41DAE70E900F20429 /* Profile.m */,
 				7C3200A91DACCF19004D65E5 /* ErrorHandler.h */,
@@ -271,6 +278,7 @@
 		DED620491DAA326B00B2FFD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C8C68261DB0C04F0027988C /* qidong.mp4 */,
 				DED6205D1DAA326B00B2FFD2 /* Info.plist */,
 				7C3200A71DACC5E4004D65E5 /* Localizable.strings */,
 				7CD40DE31DAB75720001680D /* PrefixHeader.pch */,
@@ -409,6 +417,7 @@
 				7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */,
 				DED620591DAA326B00B2FFD2 /* Assets.xcassets in Resources */,
 				DED620541DAA326B00B2FFD2 /* Main.storyboard in Resources */,
+				7C8C68271DB0C04F0027988C /* qidong.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +502,7 @@
 				7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */,
 				7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */,
 				7CD40DE61DAB76F00001680D /* RequestAPI.m in Sources */,
+				7C8C68251DB0BFCB0027988C /* WSMovieController.m in Sources */,
 				7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */,
 				DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */,
 				DED6204B1DAA326B00B2FFD2 /* main.m in Sources */,
