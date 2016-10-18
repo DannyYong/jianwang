@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self. navigationItem.title = @"登录";
+    
    
     // Do any additional setup after loading the view.
 }
@@ -108,7 +109,7 @@
     NSString *encodedPwd = [NSString encryptWithPublicKeyFromModulusAndExponent:[_passWordCM.text getMD5_32BitString].UTF8String modulus:[[StorageMgr singletonStorageMgr]objectForKey:@"Modulus"]  exponent:[[StorageMgr singletonStorageMgr]objectForKey:@"Exponent" ]];
     
     NSDictionary *parments =@{
-                              @"userName":_userNameCM, @"password" :encodedPwd, @"deviceType": @7001,  @"deviceId" : [Utilities uniqueVendor]
+                              @"userName":_userNameCM.text, @"password" :encodedPwd, @"deviceType": @7001,  @"deviceId" : [Utilities uniqueVendor]
                               };
     //菊花膜
     UIActivityIndicatorView *avi =[Utilities getCoverOnView:self.view];
@@ -126,8 +127,15 @@
             [self.view endEditing:YES];
             [Utilities setUserDefaults:@"Username" content:_userNameCM.text];
             _passWordCM.text = @"";
-            
+            [self.navigationController popViewControllerAnimated:YES];
             [self dismissModelViewController];
+            NSDictionary *resultDiction = [NSDictionary dictionaryWithObjectsAndKeys:@"ueseName",@"password", nil];
+            [[NSUserDefaults standardUserDefaults] setObject:resultDiction forKey:@"ResultAuthData"];
+            //保存数据，实现持久化存储
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            UIViewController *singin = [Utilities getStoryboardInstanceByIdentity:@"HomeNav"];
+            [self.view.window setRootViewController:singin];
+            [Utilities popUpAlertViewWithMsg:@"登录成功" andTitle:nil onView:self];
             
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];

@@ -67,9 +67,9 @@
 
 
 - (void)enterMainAction:(UIButton *)btn {
-    UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"singInnav"];
-    [self presentViewController:signNC animated:YES completion:nil];
-    
+//    UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"singInnav"];
+    UIViewController *singin = [Utilities getStoryboardInstanceByIdentity:@"singInnav"];
+    [self.view.window setRootViewController:singin];
 }
 
 

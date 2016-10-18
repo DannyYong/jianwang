@@ -192,8 +192,7 @@
         [aiv stopAnimating];
         NSLog(@"post responseObject = %@",responseObject);
         if ([responseObject[@"resultFlag"] integerValue] == 8001) {
-            UINavigationController *signNC = [Utilities getStoryboardInstanceByIdentity:@"HomeNav"];
-            [self presentViewController:signNC animated:YES completion:nil];
+            [self.navigationController popViewControllerAnimated:YES];
             
         }else{
             NSString *errorDesc = [ErrorHandler getProperErrorString:[responseObject[@"resultFlag"]integerValue]];

@@ -19,6 +19,9 @@
     [super viewDidLoad];
  //   [self userdaful];
    }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.tableView endEditing:YES];
+}
 //- (BOOL)loginCheck {
 //    if ([[[StorageMgr singletonStorageMgr] objectForKey:@"MemberId"] isKindOfClass:[NSNull class]] || [[StorageMgr singletonStorageMgr] objectForKey:@"MemberId"] == nil) {
 //        return NO;
