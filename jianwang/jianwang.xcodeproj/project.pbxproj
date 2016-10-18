@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F8B90F51DAE70E900F20429 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B90F41DAE70E900F20429 /* Profile.m */; };
+		1FC8B8481DB626DF00F8D9DB /* clubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8B8471DB626DF00F8D9DB /* clubTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		1FC8B84B1DB626F600F8D9DB /* VoucherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8B84A1DB626F600F8D9DB /* VoucherTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		1FC8B8521DB62A7F00F8D9DB /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8B84D1DB62A7F00F8D9DB /* Advertisement.m */; settings = {ASSET_TAGS = (); }; };
+		1FC8B8531DB62A7F00F8D9DB /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8B84F1DB62A7F00F8D9DB /* Club.m */; settings = {ASSET_TAGS = (); }; };
+		1FC8B8541DB62A7F00F8D9DB /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8B8511DB62A7F00F8D9DB /* Voucher.m */; settings = {ASSET_TAGS = (); }; };
 		7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200A11DACBC88004D65E5 /* singUpViewController.m */; };
 		7C3200A51DACC5E4004D65E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C3200A71DACC5E4004D65E5 /* Localizable.strings */; };
 		7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3200AA1DACCF19004D65E5 /* ErrorHandler.m */; };
@@ -54,6 +59,16 @@
 /* Begin PBXFileReference section */
 		1F8B90F31DAE70E900F20429 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		1F8B90F41DAE70E900F20429 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		1FC8B8461DB626DF00F8D9DB /* clubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clubTableViewCell.h; sourceTree = "<group>"; };
+		1FC8B8471DB626DF00F8D9DB /* clubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clubTableViewCell.m; sourceTree = "<group>"; };
+		1FC8B8491DB626F600F8D9DB /* VoucherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherTableViewCell.h; sourceTree = "<group>"; };
+		1FC8B84A1DB626F600F8D9DB /* VoucherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherTableViewCell.m; sourceTree = "<group>"; };
+		1FC8B84C1DB62A7F00F8D9DB /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
+		1FC8B84D1DB62A7F00F8D9DB /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
+		1FC8B84E1DB62A7F00F8D9DB /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		1FC8B84F1DB62A7F00F8D9DB /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		1FC8B8501DB62A7F00F8D9DB /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
+		1FC8B8511DB62A7F00F8D9DB /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
 		2DD7368C13562D275DFAF7AF /* Pods-jianwang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jianwang.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-jianwang/Pods-jianwang.debug.xcconfig"; sourceTree = "<group>"; };
 		4A431D87BAF74A5B19906D6A /* libPods-jianwang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jianwang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C32009F1DACBB35004D65E5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -142,6 +157,12 @@
 		7C3200A81DACCEF0004D65E5 /* AliUtil */ = {
 			isa = PBXGroup;
 			children = (
+				1FC8B84C1DB62A7F00F8D9DB /* Advertisement.h */,
+				1FC8B84D1DB62A7F00F8D9DB /* Advertisement.m */,
+				1FC8B84E1DB62A7F00F8D9DB /* Club.h */,
+				1FC8B84F1DB62A7F00F8D9DB /* Club.m */,
+				1FC8B8501DB62A7F00F8D9DB /* Voucher.h */,
+				1FC8B8511DB62A7F00F8D9DB /* Voucher.m */,
 			);
 			name = AliUtil;
 			sourceTree = "<group>";
@@ -173,6 +194,10 @@
 				DED6205A1DAA326B00B2FFD2 /* LaunchScreen.storyboard */,
 				DED620521DAA326B00B2FFD2 /* Main.storyboard */,
 				DED620581DAA326B00B2FFD2 /* Assets.xcassets */,
+				1FC8B8461DB626DF00F8D9DB /* clubTableViewCell.h */,
+				1FC8B8471DB626DF00F8D9DB /* clubTableViewCell.m */,
+				1FC8B8491DB626F600F8D9DB /* VoucherTableViewCell.h */,
+				1FC8B84A1DB626F600F8D9DB /* VoucherTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -492,17 +517,22 @@
 			files = (
 				7CD40DDF1DAB72140001680D /* NSString+Crypt.m in Sources */,
 				7CD40DE01DAB72140001680D /* StorageMgr.m in Sources */,
+				1FC8B8541DB62A7F00F8D9DB /* Voucher.m in Sources */,
 				DED620571DAA326B00B2FFD2 /* jianwang.xcdatamodeld in Sources */,
 				7CD40DDD1DAB72140001680D /* AppAPIClient.m in Sources */,
+				1FC8B84B1DB626F600F8D9DB /* VoucherTableViewCell.m in Sources */,
 				7C832C051DAF7D990042942A /* HomeTableViewController.m in Sources */,
 				7CD40DE11DAB72140001680D /* Utilities.m in Sources */,
 				1F8B90F51DAE70E900F20429 /* Profile.m in Sources */,
 				7C83482D1DAE1C9600C8CD57 /* singInViewController.m in Sources */,
+				1FC8B8521DB62A7F00F8D9DB /* Advertisement.m in Sources */,
 				7CD40DD11DAB71A80001680D /* BasicEncodingRules.m in Sources */,
 				7CD40DDE1DAB72140001680D /* NSData+Base64.m in Sources */,
 				7C3200A21DACBC88004D65E5 /* singUpViewController.m in Sources */,
 				7CD40DE61DAB76F00001680D /* RequestAPI.m in Sources */,
 				7C8C68251DB0BFCB0027988C /* WSMovieController.m in Sources */,
+				1FC8B8531DB62A7F00F8D9DB /* Club.m in Sources */,
+				1FC8B8481DB626DF00F8D9DB /* clubTableViewCell.m in Sources */,
 				7C3200AB1DACCF19004D65E5 /* ErrorHandler.m in Sources */,
 				DED6204E1DAA326B00B2FFD2 /* AppDelegate.m in Sources */,
 				DED6204B1DAA326B00B2FFD2 /* main.m in Sources */,
